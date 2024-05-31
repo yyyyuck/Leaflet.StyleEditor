@@ -23,7 +23,7 @@ export default function setupColorElement () {
           this.options.colorRamp = this.options.styleEditorOptions.colorRamp
         }
       }
-      return this.options.colorRamp
+      return ['#2A81CB', '#FFD326', '#CB2B3E', '#2AAD27', '#CB8427', '#CAC428', '#9C2BCB', '#7B7B7B', '#3D3D3D']
     },
 
     /** define what to do when color is changed */

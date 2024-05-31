@@ -15,6 +15,7 @@ export default function setupDefaultMarker () {
       let iconSize = iconOptions.iconSize
       return new L.Icon({
         iconUrl: this._getMarkerUrlForStyle(iconOptions),
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: iconOptions.iconSize,
         iconColor: iconOptions.iconColor,
         icon: iconOptions.icon,
@@ -38,17 +39,12 @@ export default function setupDefaultMarker () {
     },
 
     _getMarkerUrl: function (size, color, icon) {
-      size = this.sizeToName(size)[0]
       if (color.indexOf('#') === 0) {
         color = color.replace('#', '')
       } else {
         color = this.options.styleEditorOptions.util.rgbToHex(color, true)
       }
-      let url = 'https://api.tiles.mapbox.com/v3/marker/pin-' + size
-      if (icon) {
-        url += '-' + icon
-      }
-      return url + '+' + color + '.png'
+      return `https://raw.githubusercontent.com/yyyyuck/leaflet-color-markers/master/img/marker-icon-${color}.png`
     },
 
     options: {

@@ -9,10 +9,10 @@
 .leaflet-control-styleeditor .leaflet-control-styleeditor-cancel {
     position: absolute;
     top: 0;
-    left: 100%;
-    background-color: #919187;
+    left: -150%;
+    background-color: #666666;
     -webkit-border-radius: 0 4px 4px 0;
-    border-radius: 0 4px 4px 0;
+    border-radius: 3px 0 0 3px;
     font-size: 12px;
     line-height: 30px;
     height: 30px;
@@ -52,7 +52,7 @@
     z-index: 1000;
 }
 .editor-enabled {
-   width: 200px;
+    width: 200px;
 }
 .leaflet-styleeditor-hidden {
     display: none;

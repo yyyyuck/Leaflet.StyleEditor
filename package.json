@@ -43,7 +43,8 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint . ./**/*.js",
-    "es-check": "./node_modules/.bin/es-check es5 ./dist/javascript/Leaflet.StyleEditor.min.js"
+    "es-check": "./node_modules/.bin/es-check es5 ./dist/javascript/Leaflet.StyleEditor.min.js",
+    "build": "webpack --mode production"
   },
   "publishConfig": {
     "access": "public"

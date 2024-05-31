@@ -27,7 +27,27 @@ export default function setupFormElement () {
     /** create title */
     createTitle: function () {
       let title = L.DomUtil.create('label', 'leaflet-styleeditor-label', this.options.uiElement)
-      title.innerHTML = this.options.title + ':'
+      let inner = ''
+      if (this.options.title === 'Icon') {
+        inner = '图标'
+      } else if (this.options.title === 'Color') {
+        inner = '颜色'
+      } else if (this.options.title === 'Size') {
+        inner = '尺寸'
+      } else if (this.options.title === 'Description') {
+        inner = '描述'
+      } else if (this.options.title === 'Opacity') {
+        inner = '透明度'
+      } else if (this.options.title === 'Weight') {
+        inner = '宽度'
+      } else if (this.options.title === 'DashArray') {
+        inner = '线条'
+      } else if (this.options.title === 'FillColor') {
+        inner = '填充颜色'
+      } else if (this.options.title === 'FillOpacity') {
+        inner = '填充透明度'
+      }
+      title.innerHTML = inner + ':'
     },
 
     /** create content (where the actual modification takes place) */
